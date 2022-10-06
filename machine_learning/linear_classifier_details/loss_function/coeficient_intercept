@@ -1,0 +1,4 @@
+2.Remember that coef_ controls the angle of the boundary
+and intercept_ shifts the boundary without changing the angle.
+3.The loss is used to fit the model on the data, and the
+ score is used to see how well we are doing

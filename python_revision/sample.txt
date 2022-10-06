@@ -1,0 +1,10 @@
+Question 1: Based on dataset does Netflix has more TV shows than Movies?
+Question 2: How many types of ratings are there in the dataset?
+Question 3: In which year most of the TV shows are released?
+Question 4: Average duration of Movies in hours?
+Question 5: Most content creating country in the world?
+Question 6: How many TV Shows are listed as Amine Series and released before 2000s?
+Question 7: Percentage of Adult content on Netflix?
+Question 8: In which month of 2021 the least amount of content was uploaded (Note: Must handle empty/nan cells)?
+Question 9: Movies or TV Shows in which 'Brad Pitt' and 'Angeline Jolie' appeared together?
+Question 10: Number of Indian Comedy Shows having more than 1 season?

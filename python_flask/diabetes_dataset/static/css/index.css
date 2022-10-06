@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: white;
+}
+
+
+#logo{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    color:white;
+    align-items:center;
+    margin:5px;
+    font-size: 60px;
+
+    
+}
+#logo img{
+    height: 80px;
+    /* filter: invert(1); */
+    margin-bottom: 4px;
+    position: relative;
+    animation-name: imgmovement;
+    animation-duration: 8s;
+    background-color: transparent;
+    animation-iteration-count: infinite;
+}
+  @keyframes imgmovement {
+    0%   { left:0px; top:0px;}
+  
+    50%  { left:600px; top:0px;}
+  
+    100% { left:0px; top:0px;}
+  }
+
+
+.form{
+    color:white;
+    margin-top:150px;
+    margin-left: 34%;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    width: 32%;  
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 15px;
+    padding:5px
+    
+}
+#form1{
+    background-color: rgba(0,0,0,0);
+}
+#lab_full{
+    background-color: rgba(0,0,0,0);
+ }
+.form input{
+    color: white;
+        width:240px;
+        padding:4px;
+        margin:10px;
+        border-radius:5px;
+        border:2px solid #578ad6;
+        font-size:16px;
+        background-color: rgba(0,0,0,0.7);
+        
+    }
+
+    #btn{
+            cursor: pointer;
+            background: rgba(87,138,214,0.8);
+            padding: 10px 16PX;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 15px;
+            margin-top:5px ;
+            /* outline: none; */
+            border: none;
+    }
+
+    .images {display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+
+      }
+      
+     .images img {
+        /* transition: opacity 1s ease-in-out; */
+        transition: all 1s ease-in-out;
+        /* border: 2px solid black; */
+        /* max-height: 100px; */
+        height: 210px;
+        width: 210px;
+      }
+      
+      .shuffle {
+        margin-bottom: 20px;
+      }
+      
+      .show {
+        opacity: 1;
+        visibility: visible;
+        width: auto;
+        transition: all 1s ease-in-out;
+      }
+      
+      .hide {
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        position: absolute;
+        transition: all 1s ease-in-out;
+      }

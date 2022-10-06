@@ -1,0 +1,12 @@
+1.how many countries participated in olymplics
+2.country where silver> and bronze<15
+3.summer olymplics name country and no fo golds are highest
+4.name any two countries which have most participants
+5.name the country have highest number of summer and winter participants
+6.what is the mean of summer and winter no of participants
+7.difference of the number bwetween summer and winter of canada
+8. name any two country whcih have least active particpant in winter
+9.which country having maximum number of active participant in the summer season
+10.which country has performed more than average in winter gold medals aranged in alphabetic order
+11.who has most summer medals (india and pak) and what is the differecne between summer medals
+12.country with count greater than average gold medals in summer

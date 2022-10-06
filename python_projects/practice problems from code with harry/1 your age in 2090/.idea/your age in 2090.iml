@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="pythontut" />
+    <orderEntry type="module" module-name="divide the apples" />
+    <orderEntry type="module" module-name="food and calories reversing" />
+    <orderEntry type="module" module-name="the next palindrome" />
+    <orderEntry type="module" module-name="listify the palindrome" />
+  </component>
+</module>

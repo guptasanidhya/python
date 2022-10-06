@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+    <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+    <!-- <script src="../static\script\script.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <div id="logo">
+                <img src="../static\assets\img\navlogo.png" alt="logo">
+                Diabetes Diagnoser
+            </div>
+
+
+            <li><a href="/home">Home</a></li>
+            <li><a href="/dataset">Pima's Dataset</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <div class="formvalues">
+            <div class="formbox">
+            <div id="name">{{ fullname }}</div>
+            <div class="prediction" id="prediction1">
+                {{ negative }}</div>
+            <div class="prediction" id="prediction2">
+                {{ positive }}
+                
+                <!-- {% if prediction !=""%}
+                    <table border="2">
+                        <th id="table_head" colspan="2">Chances of Diabetes</th>
+                        <tr id="neg">
+                            <td>negative</td>
+                            <td>{{ negative }}</td>
+                        </tr>
+                        <tr id="pos">
+                            <td>Positive</td>
+                            <td>{{ positive }}</td>
+                        </tr>
+                    </table> -->
+                    <!-- {% endif %} -->
+                <!--                {% if prediction == 0 %}-->
+                <!--                Person is not Diabetic-->
+
+                <!--            {% elif prediction == 1 %}-->
+                <!--              Person is Diabetic-->
+                <!--            {% endif %}-->
+            
+        </div>
+            <form id="my-form" action="{{ url_for('predict') }}" method="post">
+                <label for="fullname">Full-name</label><br>
+                <input type="text" step="any" id="fullname" name="fullname" placeholder="Your Full-name" required><br>
+
+                <label for="pregnancies" onClick="pregnancies()">Pregnancies</label><br>
+                <input type="number" step="any" id="pregnancies" name="pregnancies" placeholder="in count"><br>
+
+                <label for="glucose" title="(Plasma glucose concentration a 2 hours
+        in an oral glucose tolerance test(mg/dL))" onClick="glucose()"> Glucose </label><br>
+                <input type="number" step="any" id="glucose" name="glucose" placeholder="in mm/dL"><br>
+
+                <label for="diastolic" title="Diastolic blood pressure (mm Hg)" onClick="diastolic()">Blood
+                    Pressure</label><br>
+                <input type="number" step="any" id="diastolic" name="diastolic" placeholder="diastolic in mm hg "><br>
+
+                <label for="triceps" title="(Triceps skin fold thickness (mm))" onClick="triceps()">Triceps</label><br>
+                <input type="number" step="any" id="triceps" name="triceps" placeholder="in mm"><br>
+
+                <label for="insulin" title="(2-Hour serum insulin (mu U/ml))" onClick="insulin()">Insulin</label><br>
+                <input type="number" step="any" id="insulin" name="insulin" placeholder="in mu U/ml"><br>
+
+                <label for="bmi" title="(Body mass index (weight in kg/(height in m)^2))"
+                    onClick="bmi()">Bmi</label><br>
+                <input type="number" step="any" id="bmi" name="bmi" placeholder="in kg/m^2"><br>
+
+                <label for="dpf"
+                    title=" Diabetes pedigree function (a function which scores likelihood of diabetes based on family history)"
+                    onClick="dpf()">DPF</label><br>
+                <input type="number" step="any" id="dpf" name="dpf" placeholder="dpf value"><br>
+
+                <label for="age" onClick="age()">Age</label><br>
+                <input type="number" step="any" id="age" name="age" placeholder="in count"><br>
+                <button class="button" id="btn1" type="submit" >Predict</button>
+                <!-- <button type="submit" class="btn-close" data-bs-dismiss="alert" aria-label="Close">Predict</button> -->
+            </form>
+        </div>
+    </div>
+
+        <div id="introSection">
+            <div id="headIntro">Diabetes</div>
+            <div class="small" id="small">Diabetes is a chronic (long-lasting) health condition that affects how your
+                body turns food into energy.</div>
+            <p class="para" id="p1"> Most of the food you eat is broken down into sugar (also called glucose) and
+                released into your bloodstream. When your blood sugar goes up, it signals your pancreas to release
+                insulin. Insulin acts like a key to let the blood sugar into your body’s cells for use as energy.</p>
+            <p class="para" id="p2">
+                If you have diabetes, your body either doesn’t make enough insulin or can’t use the insulin it makes as
+                well as it should. When there isn’t enough insulin or cells stop responding to insulin, too much blood
+                sugar stays in your bloodstream. Over time, that can cause serious health problems, such as heart
+                disease, vision loss, and kidney disease.</p>
+            <p class="para" id="p3">There isn’t a cure yet for diabetes, but losing weight, eating healthy food, and
+                being active can really help. Taking medicine as needed, getting diabetes self-management education and
+                support, and keeping health care appointments can also reduce the impact of diabetes on your life.</p>
+            <button class="button" id="button2"><a id="btn2"
+                    href="https://www.google.com/search?q=diabetes&rlz=1C1CHBD_enIN927IN927&oq=diabetes&aqs=chrome.0.69i59l5j69i60l3.1899j0j7&sourceid=chrome&ie=UTF-8">Read
+                    More</a></button>
+            
+                    <table border="2">
+                        <tr>
+                            <th>Pregnancies</th>
+                            <th>Glucose</th>
+                            <th>Diastolic</th>
+                            <th>Triceps</th>
+                        </tr>
+                        <tr>
+                            <td>{{ pregnancies }}</td>
+                            <td>{{ glucose }}</td>
+                            <td>{{ diastolic }}</td>
+                            <td>{{ triceps }}</td>
+                        </tr>
+                        <tr>
+                            <th>Insulin</th>
+                            <th>Bmi</th>
+                            <th>Dpf</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>{{ insulin }}</td>
+                            <td>{{ bmi }}</td>
+                            <td>{{ dpf }}</td>
+                            <td>{{ age }}</td>
+                        </tr>
+                    </table>
+
+                    <!-- <ul id="users" style="    display:flex;flex-direction: row; color: white; font-size: 30px; list-style-type:none; flex-wrap: wrap; align-items: center; justify-content: center;">
+
+                            <li>pregnancies: {{ pregnancies }} </li>
+                            <li>glucose: {{ glucose }} </li>
+                            <li>diastolic: {{ diastolic }} </li>
+                            <li>triceps: {{ triceps }} </li>
+                            <li>insulin: {{ insulin }} </li>
+                            <li>bmi: {{ bmi }} </li>
+                            <li>dpf: {{ dpf }} </li>
+                            <li>age: {{ age }} </li>
+                    </ul> -->
+                    <!-- <ul id="users" style="    display:flex;flex-direction: row; color: black; font-size: 20px; list-style-type:none;">
+                        {% for values in features %}
+                          <li>{{ values }}</li>
+                        <li> </li>
+                        {% endfor %}
+                    </ul> -->
+        </div>
+
+
+    </div>
+
+    <footer id="footer">
+        | Copyright 2022 learningpath.com | All rights reserved</footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../static\script\script.js"></script>
+        
+</body>
+
+</html>

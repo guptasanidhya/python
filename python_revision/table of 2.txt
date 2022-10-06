@@ -1,0 +1,10 @@
+Question 1: What is the total number of videos having more than 30K dislikes?
+Question 2: What is the total number of videos having tags "Music" or "Game"?
+Question 3: what is the total number of videos having more dislikes than likes?
+Question 4: Which gaming video has the highest number of Dislikes?
+Question 5: What is the total number of videos having tag as "Music" and having more than 750k likes?
+Question 6: Which channel has the highest number of average views?
+Question 7: What is the video id of the video which is removed from the youtube having highest number of views?
+Question 8: What is the average interaction rate of category_id "10" (Comments)?
+Question 9: Which video is the most popular (Likes to Views Percentage)?
+Question 10: 3rd category_id having the lowest average interaction rate?

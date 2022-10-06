@@ -1,0 +1,10 @@
+Question 1: What is the full name of 6th most valuable player?
+Question 2: Club of the player having best dribbling skills but has rating less than 90?
+Question 3: Number of players have same club and nation jersey number?
+Question 4: Which youngster has highest potential?
+Question 5: Highest rated player club positioning as Left Back(LB) and tagged as 'Crosser'?
+Question 6: Name(long_name) of the 2nd player which is left footed(preferred_foot) and tagged as 'Clinical Finisher'?
+Question 7: Number of Right footed Spanish(nationality_name) players play for club 'Manchester City'?
+Question 8: Highest paid goal keeper(GK) height above 190cm and has a trait(player_traits) as 'Leadership'?
+Question 9: Which club has the most english(England) players valued above 50mil euros?
+Question 10: Which country has more left footed players?

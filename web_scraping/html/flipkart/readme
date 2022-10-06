@@ -1,0 +1,17 @@
+steps to create rest api using flask
+1.Open the page of product you want to fetch data of
+2.Right click then inspect -network option then refresh the page so you will get the search api of flipkart
+3.copy the api as curl bash and convert the curl to python request code using online convertor(i.e. thrillworks)
+4.create a function say get_html_source_code and paste tge python request code as we dont want the cookies so
+only keeping the parameters and header values and format it ; return response.text from function
+5.change the q value in params section from static to dynamic say from shoes to dynamic product name that you will
+fetch in future
+6.call the html_source_code function in your route function say hello_world
+7.get the html source code from the response.text in variable and pass it to beautifulsoup to make it bsp object
+8.start parsing your values
+9 i.e i parsed the a tag for the urls of different items
+after getting the urls in the list get the url text from the urls using request method on individual urls
+pass the request url text in beautifulsoup for extracting the data
+10.parse the individual names ,prices using beautiful soup and add them in dictionary
+11.add a variable product_name and fetch the data from the restapi using request.args.get('q')
+and send the data to function get_html_source_code

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+hello buddy !
+<form action="{{ url_for('predict')}}" method="post">
+  <label for="sl">sepal Length</label><br>
+  <input type="number" step=any id="sl"  name="sl" value="0"><br>
+  <label for="sw">sepal width</label><br>
+  <input type="number" step=any id="sw" name="sw" value="0"><br>
+  <label for="pl">petal length</label><br>
+  <input type="number" step=any id="pl" name="pl" value="0"><br>
+  <label for="pw">petal width</label><br>
+  <input type="number"  step=any id="pw" name="pw" value="0"><br>
+    <button type="submit">Predict</button>
+
+</form>
+<div> {% if prediction == 0 %}
+        iris-setosa
+        <img src="../static\assets\img\irissetosa.jpg">
+    {% elif prediction == 1 %}
+        iris-versicolor
+        <img src="../static\assets\img\irisversicolor.jpg">
+    {% elif prediction == 2 %}
+        iris-virginica
+        <img src="../static\assets\img\irisvirginica.jpg">
+    {% endif %}
+</div>
+</body>
+</html>

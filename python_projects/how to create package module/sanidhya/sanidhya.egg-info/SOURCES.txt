@@ -1,0 +1,6 @@
+setup.py
+sanidhya/__init__.py
+sanidhya.egg-info/PKG-INFO
+sanidhya.egg-info/SOURCES.txt
+sanidhya.egg-info/dependency_links.txt
+sanidhya.egg-info/top_level.txt

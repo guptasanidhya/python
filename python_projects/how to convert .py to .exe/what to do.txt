@@ -1,0 +1,13 @@
+1.pip install pyinstaller
+2.make a script of any type
+(if you make script type rather than py than use python .\file.extension)
+otherwise
+.\file
+
+3.pyinstaller .\file.extension(to make a executable file with all extra information)
+go to dist then main then filename.exe
+
+4.if you want only execution file then
+pyinstaller --onefile .\filename.extension (if another type)
+or
+pyinstaller --onefile .\filename(for py )
