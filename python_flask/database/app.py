@@ -69,7 +69,7 @@ def log_submit():
         r=mycursor.fetchall()
         count=mycursor.rowcount
         if count==1:
-            return render_template("home.html",name=s)
+            return render_template("home.html")
         elif count>1:
             return "more then one user"
         else:
@@ -82,6 +82,21 @@ def log_submit():
 def logout():
     session.pop('username',None)
     return render_template("index.html")
+
+@app.route('/home')
+def home():
+    title='Heart Diagnoser'
+    return render_template("home.html",title=title)
+
+@app.route('/dataset')
+def dataset():
+    title='Heart Diagnoser'
+    return render_template("dataset.html",title=title)
+
+@app.route("/aboutus")
+def aboutus():
+    title='Heart Diagnoser'
+    return render_template("aboutus.html",title=title)
 
 if __name__ == "__main__":
      app.run(debug=True)
