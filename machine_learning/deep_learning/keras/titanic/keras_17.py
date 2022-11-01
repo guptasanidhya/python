@@ -29,7 +29,7 @@ model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accurac
 early_stopping_monitor = EarlyStopping(patience=2)
 
 # Fit the model
-model.fit(predictors,target,validation_split=0.3,callbacks=[early_stopping_monitor])
+model.fit(predictors,target,validation_split=0.3,epochs=30,callbacks=[early_stopping_monitor])
 
 """
 Early stopping: Optimizing the optimization

@@ -9,7 +9,7 @@ from keras.utils import to_categorical
 
 df=pd.read_csv('mnist.csv')
 y=to_categorical(df.iloc[:,0])
-
+print(df.info())
 df.drop(columns=df.columns[0],
         axis=1,
         inplace=True)
@@ -32,7 +32,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 # Fit the model
-model.fit(x, y, validation_split=0.3)
+model.fit(x, y, validation_split=0.3,epochs=10)
 
 """
 Building your own digit recognition model

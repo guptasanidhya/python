@@ -1,16 +1,16 @@
 from sklearn.metrics import mean_squared_error
 import numpy as np
-input_data=[np.array([0,3]),np.array([1,3])]
+input_data=[np.array([0,3]),np.array([1,2]),np.array([-1,-2]),np.array([4,0])]
 # Sample weights
 weights_0 = {'node_0': [2, 1],
              'node_1': [1, 2],
              'output': [1, 1]
             }
 weights_1 = {'node_0': [2, 1],
-             'node_1': [1, 1],
-             'output': [1, 0]
+             'node_1': [1, 1.5],
+             'output': [1, 1.5]
             }
-target_actuals=[3,9]
+target_actuals=[1,3,5,7]
 # Create model_output_0
 model_output_0 = []
 # Create model_output_1
