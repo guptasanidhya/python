@@ -1,7 +1,9 @@
 from tensorflow import Variable,ones,matmul,keras
 import numpy as np
 import tensorflow as tf
-borrower_features=Variable([[6.96469188e-01, 2.86139339e-01, 2.26851448e-01, 5.51314771e-01,
+borrower_features=Variable(
+    [
+        [6.96469188e-01, 2.86139339e-01, 2.26851448e-01, 5.51314771e-01,
         7.19468951e-01, 4.23106462e-01, 9.80764210e-01, 6.84829712e-01,
         4.80931908e-01, 3.92117530e-01],
        [3.43178004e-01, 7.29049683e-01, 4.38572258e-01, 5.96778952e-02,

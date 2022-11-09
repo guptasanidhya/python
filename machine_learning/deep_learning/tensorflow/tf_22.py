@@ -14,6 +14,8 @@ C23 = multiply(A23,B23)
 
 print(C1)
 print(C23)
+print('\n C1: {}'.format(C1.numpy()))
+print('\n C23: {}'.format(C23.numpy()))
 
 a1 = Variable([-1.0])
 print(a1)

@@ -72,7 +72,8 @@ import pandas as pd
 df =pd.read_csv('uci_credit_card.csv')
 # print(df.columns)
 default= df['default.payment.next.month'].values
-borrower_features = df.drop(['default.payment.next.month','ID'], axis=1).values
+new_df = df.drop(['default.payment.next.month','ID'], axis=1).values
+borrower_features=Variable(new_df,tf.float32)
 # Define the model
 def model(w1, b1, w2, b2, features = borrower_features):
 	# Apply relu activation functions to layer 1
