@@ -26,7 +26,7 @@ def loss_function(intercept, slope, targets, features):
 opt = keras.optimizers.Adam()
 
 # Load data in batches
-for batch in pd.read_csv('kc_house_data.csv', chunksize=100):
+for batch in pd.read_csv('../estimators_api/kc_house_data.csv', chunksize=100):
 	size_batch = np.array(batch['sqft_lot'], np.float32)
 
 	# Extract the price values for the current batch

@@ -2,7 +2,7 @@ from tensorflow import Variable,constant,keras
 import numpy as np
 import pandas as pd
 
-housing=pd.read_csv('kc_house_data.csv')
+housing=pd.read_csv('../estimators_api/kc_house_data.csv')
 # Define the targets and features
 price = np.array(housing['price'], np.float32)
 price_log=np.log(price)

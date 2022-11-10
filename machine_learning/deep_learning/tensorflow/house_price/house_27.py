@@ -4,7 +4,7 @@ from tensorflow import keras
 import tensorflow as tf
 
 # Assign the path to a string variable named data_path
-data_path = 'kc_house_data.csv'
+data_path = '../estimators_api/kc_house_data.csv'
 
 # Load the dataset as a dataframe named housing
 housing = pd.read_csv(data_path)
