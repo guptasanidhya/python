@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2022 at 09:56 AM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.8
+-- Generation Time: Oct 06, 2022 at 05:45 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,7 +39,7 @@ CREATE TABLE `users` (
   `dpf` float DEFAULT NULL,
   `age` float DEFAULT NULL,
   `date` datetime NOT NULL DEFAULT current_timestamp(),
-  `negetive` float NOT NULL,
+  `negative` float NOT NULL,
   `positive` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -47,7 +47,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`sno`, `fullname`, `pregnancies`, `glucose`, `diastolic`, `triceps`, `insulin`, `bmi`, `dpf`, `age`, `date`, `negetive`, `positive`) VALUES
+INSERT INTO `users` (`sno`, `fullname`, `pregnancies`, `glucose`, `diastolic`, `triceps`, `insulin`, `bmi`, `dpf`, `age`, `date`, `negative`, `positive`) VALUES
 (1, 'Sanidhya', 5, 5, 5, 5, 5, 5, 5, 5, '2022-07-08 11:53:38', 0.831234, 0.168766),
 (4, 'Sanidhya', 5, 5, 5, 5, 5, 5, 5, 2, '2022-07-08 12:13:32', 0.834241, 0.165759),
 (5, 'Sanidhya', 5, 5, 5, 5, 5, 5, 5, 5, '2022-07-08 12:18:57', 0.831234, 0.168766),
@@ -346,7 +346,9 @@ INSERT INTO `users` (`sno`, `fullname`, `pregnancies`, `glucose`, `diastolic`, `
 (298, 'Sanidhya', 0, 0, 0, 0, 0, 0, 0, 0, '2022-07-16 17:58:41', 0.997167, 0.00283314),
 (299, 'Sanidhya', 0, 0, 0, 0, 0, 0, 0, 0, '2022-07-16 17:59:20', 0.997167, 0.00283314),
 (300, 'Sanidhya', 0, 0, 0, 0, 0, 0, 0, 0, '2022-07-16 18:05:21', 0.997167, 0.00283314),
-(301, 'Sanidhya', 0, 0, 0, 0, 0, 0, 0, 0, '2022-07-18 06:58:33', 0.997167, 0.00283314);
+(301, 'Sanidhya', 0, 0, 0, 0, 0, 0, 0, 0, '2022-07-18 06:58:33', 0.997167, 0.00283314),
+(302, 'Sanidhya', 0, 0, 0, 0, 0, 0, 0, NULL, '2022-07-30 14:43:34', 0.996682, 0.00331758),
+(303, 'Sanidhya', 0, 0, 0, 0, 0, 0, 0, 1, '2022-09-16 06:54:07', 0.997146, 0.00285355);
 
 --
 -- Indexes for dumped tables
@@ -366,7 +368,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=302;
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=304;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
