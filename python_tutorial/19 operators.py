@@ -1,5 +1,5 @@
-# a=5
-# b=10
+a=5
+b=10
 # print("sum=",a+b)
 # print("sub=",a-b)
 # print("mul=",a*b)
