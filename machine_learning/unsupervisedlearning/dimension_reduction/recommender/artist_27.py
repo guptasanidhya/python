@@ -46,3 +46,6 @@ for j in range(len(users)):#j is number of users
 print(df)
 df.drop("arname",axis=1,inplace=True)
 print(df)
+
+
+

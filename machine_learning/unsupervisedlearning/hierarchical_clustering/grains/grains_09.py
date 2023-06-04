@@ -37,3 +37,6 @@ ct = pd.crosstab(df['labels'], df['varieties'])
 print(ct)
 
 plt.show()
+"""
+
+"""

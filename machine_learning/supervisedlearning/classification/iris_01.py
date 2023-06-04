@@ -9,6 +9,7 @@ a=input( "'0':'SepalLengthCm','1':'SepalWidthCm'"
         "enter the values you have:")
 values=[]
 values.append(a.split(','))
+print(values)
 feature=[]
 for i in range(len(values[0])):
       feature.append(dict[values[0][i]])
@@ -16,7 +17,7 @@ print(feature)
 df =pd.read_csv('Iris.csv')
 df.replace(('Iris-setosa','Iris-versicolor','Iris-virginica'),(0,1,2),inplace=True)
 # print(df.head())
-X=df.loc[:,feature].values
+X=df.loc[:,feature].values#if we do not use .values it will return object but here it is returning numpy array
 print(X)
 y=df['Species'].values
 

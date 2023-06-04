@@ -16,7 +16,7 @@ print(feature)
 df =pd.read_csv('Iris.csv')
 df.replace(('Iris-setosa','Iris-versicolor','Iris-virginica'),(0,1,2),inplace=True)
 # print(df.head())
-X=df.drop(feature,axis=1).values
+X=df.drop(feature,axis=1).values#axis-1 means columns
 y=df['Species'].values
 
 knn=KNeighborsClassifier(n_neighbors=7)

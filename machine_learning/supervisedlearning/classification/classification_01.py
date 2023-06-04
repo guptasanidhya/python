@@ -48,3 +48,37 @@ The first two rows of the DataFrame consist of votes made by Republicans and the
 There are 17 predictor variables, or features, in this DataFrame.
 
 The target variable in this DataFrame is 'party'.'''
+
+"""
+import pandas as pd
+import numpy as np
+
+df= pd.read_csv('house-votes-8.csv')
+
+y=df.iloc[:,0]
+df.drop(df.iloc[0],axis=1,inplace=True)
+# print(y)
+
+v=int(df.shape[1])
+# print(v)
+# Get the frequency counts of 'category_var'
+frequency_counts = df.iloc[:,0].value_counts()
+#
+#  Print the frequency counts
+print(frequency_counts)
+
+for i in range(v):
+    column_values = df.iloc[:, i]
+    column_values.replace(('y', 'n'), (1, 0), inplace=True)
+    mode_value = column_values.mode()[0]
+    column_values.replace('?', mode_value, inplace=True)
+
+# Get the frequency counts of 'category_var'
+frequency_counts = df.iloc[:,1].value_counts()
+# Print the frequency counts
+print(frequency_counts)
+
+print(df.head())
+df=df.astype(float)
+print(df)
+"""

@@ -31,3 +31,17 @@ Recall that the principal components are the directions along which the the data
 strength of the linear relationship between two data samples. The Pearson's correlation coefficient
  is calculated as the covariance of the two variables divided by the product of the standard deviation 
  of each data sample."""
+
+"""
+Correlated data in nature
+You are given an array grains giving the width and length of samples of grain. You suspect that width and length will be correlated. To confirm this, make a scatter plot of width vs length and measure their Pearson correlation.
+
+Instructions
+100 XP
+Import:
+matplotlib.pyplot as plt.
+pearsonr from scipy.stats.
+Assign column 0 of grains to width and column 1 of grains to length.
+Make a scatter plot with width on the x-axis and length on the y-axis.
+Use the pearsonr() function to calculate the Pearson correlation of width and length.
+"""
