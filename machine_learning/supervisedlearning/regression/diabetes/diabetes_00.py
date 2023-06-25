@@ -1,29 +1,19 @@
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import confusion_matrix,roc_curve
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import roc_auc_score
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import GridSearchCV
-from scipy.stats import randint
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import RandomizedSearchCV
+
 from sklearn.linear_model import LogisticRegression
 df=pd.read_csv("diabetes.csv")
 # print(df.groupby('diabetes').size())
 X=df.iloc[:,df.columns!='diabetes']
 y=df['diabetes']
 # print(df.describe)
+""" stratify=df['diabetes'] ensures that the splitting is done while preserving the proportion of the 'diabetes' classes in both the training and testing datasets."""
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.4,stratify=df['diabetes'],random_state=42)
 means = np.mean(X_train, axis=0)
 stds = np.std(X_train, axis=0)
 X_train = (X_train - means)/stds
-y_test = (y_test - means)/stds
+X_test = (X_test - means)/stds
 logreg = LogisticRegression()
 
 # Fit the classifier to the training data

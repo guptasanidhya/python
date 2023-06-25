@@ -14,7 +14,7 @@ print("Dimensions of y before reshaping: ", y.shape)
 print("Dimensions of X before reshaping: ", X.shape)
 
 # Reshape X and y
-y_reshaped = y.reshape(-1,1)
+y_reshaped = y.reshape(-1,1)#y.reshape(-1, 1), the -1 indicates that the number of rows should be determined automatically, while 1 indicates that there should be a single column
 X_reshaped = X.reshape(-1,1)
 
 # Print the dimensions of y_reshaped and X_reshaped

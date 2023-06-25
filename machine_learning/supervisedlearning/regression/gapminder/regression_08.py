@@ -14,9 +14,15 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,random_state=42,test_siz
 
 # Create the hyperparameter grid
 l1_space = np.linspace(0, 1, 30)
+# alpha_space = np.logspace(-4, 0, 5)
 # print(l1_space)
-param_grid = {'l1_ratio': l1_space}
-
+# param_grid = {    'alpha': alpha_space,
+#     'l1_ratio': l1_space,
+#     'fit_intercept': [True, False],
+#     'max_iter': [100, 500, 1000]}
+param_grid = {
+    'l1_ratio': l1_space}
+"""l1_ratio: This parameter determines the mix of L1 and L2 penalties. It is a value between 0 and 1, where 0 corresponds to Ridge regression (L2 penalty only) and 1 corresponds to Lasso regression (L1 penalty only)."""
 # Instantiate the ElasticNet regressor: elastic_net
 elastic_net = ElasticNet()
 

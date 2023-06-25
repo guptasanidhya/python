@@ -27,7 +27,8 @@ y_pred = logreg.predict(X_test)
 print(X_test)
 print(y_pred)
 # Compute predicted probabilities: y_pred_prob
-y_pred_prob = logreg.predict_proba(X_test)[:,1]
+#we need positive probabilites for roc curve
+y_pred_prob = logreg.predict_proba(X_test)[:,1] #By selecting [:,1], you are extracting the probabilities for the positive class (class 1) only. This can be useful when you want to use the predicted probabilities for further analysis or to make decisions based on different thresholds.
 # z_pred_prob = logreg.predict_proba(X_test)
 print(y_pred_prob)
 # print(z_pred_prob)

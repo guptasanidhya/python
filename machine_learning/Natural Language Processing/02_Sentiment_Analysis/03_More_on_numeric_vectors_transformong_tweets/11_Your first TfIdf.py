@@ -1,0 +1,24 @@
+"""Your first TfIdf
+In this exercise, you will apply the TfIdf method to the small annak dataset, containing the first sentence of Anna Karenina by Leo Tolstoy.
+
+Your task will be to work with this dataset and apply the TfidfVectorizer() function. Recall that performing a numeric transformation of text is your first step in being able to understand the sentiment of the text. The Tfidf vectorizer is another way to construct a vocabulary from our sentiment column.
+
+Instructions
+100 XP
+Import the function for building a TfIdf vectorizer from sklearn.feature_extraction.text.
+Call the TfidfVectorizer() function and fit it on the annak dataset .
+Transform the vectorizer."""
+# Import the required function
+from sklearn.feature_extraction.text import TfidfVectorizer
+annak = ['Happy families are all alike;', 'every unhappy family is unhappy in its own way']
+
+tfidf=TfidfVectorizer()
+
+# Call the vectorizer and fit it
+anna_vect = tfidf.fit(annak)
+
+# Create the tfidf representation
+anna_tfidf = anna_vect.transform(annak)
+
+# Print the result
+print(anna_tfidf.toarray())
